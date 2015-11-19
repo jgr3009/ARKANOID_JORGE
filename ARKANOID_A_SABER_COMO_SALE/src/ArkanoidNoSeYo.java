@@ -13,7 +13,7 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 	private static int ALTO_PANTALLA=400;
 	private static int ANCHO_CURSOR = 60;
 	
-	//constantes para la pir·mide
+	//constantes para la pir√°mideeeeee
 	private static final int ANCHO_LADRILLO = 30;
 	private static final int ALTO_LADRILLO = 12;
 	private static final int LADRILLOS_BASE = 12;
@@ -100,7 +100,7 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 	}
 	
 	
-	//chequeaCursor devolver· true si ha chocado el cursor con la pelota
+	//chequeaCursor devolver√° true si ha chocado el cursor con la pelota
 	// y false si no ha chocado.
 	private boolean chequeaCursor(){
 		if (getElementAt(pelota.getX(), pelota.getY()+alto_pelota)==cursor){
@@ -124,7 +124,7 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 	
 
 	
-	//mueve el cursor siguiendo la posiciÛn del ratÛn
+	//mueve el cursor siguiendo la posici√≥n del rat√≥n
 	public void mouseMoved (MouseEvent evento){
 		if( (evento.getX()+ANCHO_CURSOR) <= ANCHO_PANTALLA){
 			cursor.setLocation(evento.getX(),ALTO_PANTALLA-100);
