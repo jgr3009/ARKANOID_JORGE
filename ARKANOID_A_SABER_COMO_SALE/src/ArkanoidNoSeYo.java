@@ -13,7 +13,7 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 	private static int ALTO_PANTALLA=400;
 	private static int ANCHO_CURSOR = 60;
 	
-	//constantes para la pirámideeeeee
+	//constantes para la piramide
 	private static final int ANCHO_LADRILLO = 30;
 	private static final int ALTO_LADRILLO = 12;
 	private static final int LADRILLOS_BASE = 12;
