@@ -4,6 +4,7 @@ import java.awt.event.MouseEvent;
 
 import acm.graphics.GOval;
 import acm.graphics.GRect;
+import acm.graphics.GImage;
 import acm.program.*;
 
 
@@ -20,16 +21,16 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 	
 	int alto_pelota = 20;
 	
-	GRect cursor;
+	GImage cursor;
 	GOval pelota;
 	double xVelocidad = 3;  //velocidad en el eje x
 	double yVelocidad = -3;  //velocidad en el eje y
 	
 	public void init(){
 		setSize(ANCHO_PANTALLA, ALTO_PANTALLA);
-		cursor = new GRect(ANCHO_CURSOR,5);
-		cursor.setFilled(true);
-		cursor.setFillColor(Color.BLUE);
+		GImage cursor = new GImage("pala.png");
+		//cursor.setFilled(true);
+		//cursor.setFillColor(Color.BLUE);
 		add(cursor, 0, ALTO_PANTALLA-100);
 		
 		pelota = new GOval(alto_pelota, alto_pelota);
@@ -42,10 +43,12 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 		addMouseListeners();
 	}
 	
+	
 	public void run(){
 		while(true){
 			pelota.move(xVelocidad, yVelocidad);
-			chequeaColision();
+			//chequeaColision();
+			chequeaPared();
 			pause(20);
 		}
 	}
@@ -60,7 +63,7 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 			for (int i=j; i<LADRILLOS_BASE; i++){
 				GRect ladrillo = new GRect (ANCHO_LADRILLO,ALTO_LADRILLO);
 				add (ladrillo,i*ANCHO_LADRILLO-x,y+j*ALTO_LADRILLO);
-				pause(60);
+				pause(3);
 			}
 			x = x+ANCHO_LADRILLO/2;
 		}
