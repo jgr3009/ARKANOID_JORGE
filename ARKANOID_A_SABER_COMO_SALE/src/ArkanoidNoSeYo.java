@@ -28,7 +28,7 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 	
 	public void init(){
 		setSize(ANCHO_PANTALLA, ALTO_PANTALLA);
-		GImage cursor = new GImage("pala.png");
+		cursor = new GImage("pala.png");
 		//cursor.setFilled(true);
 		//cursor.setFillColor(Color.BLUE);
 		add(cursor, 0, ALTO_PANTALLA-100);
@@ -128,13 +128,15 @@ public class ArkanoidNoSeYo extends acm.program.GraphicsProgram{
 
 	
 	//mueve el cursor siguiendo la posición del ratón
+	
+	
 	public void mouseMoved (MouseEvent evento){
-		if( (evento.getX()+ANCHO_CURSOR) <= ANCHO_PANTALLA){
-			cursor.setLocation(evento.getX(),ALTO_PANTALLA-100);
+		if( (evento.getX()+cursor.getWidth()) <= getWidth()){
+			cursor.setLocation(evento.getX(),cursor.getY());
 		}
+	
+	
 	}
-	
-	
 	
 	
 	
